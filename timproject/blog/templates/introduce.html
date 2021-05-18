@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</head>
+<body>
+
+        
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'new' %}">글쓰기</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'introduce' %} ">자기소개</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="http://image.kmib.co.kr/online_image/2020/0906/611611110014982317_1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>메시</h5>
+              <p>메시 경기 직관 가는 것이 저의 버킷리스트입니다.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://post-phinf.pstatic.net/MjAxOTAzMTBfODMg/MDAxNTUyMTcwMDA1Njky.jAUIM3EKVNmRgDhMOO-eyJJHsDA-ZUHOfgLWsMAUfG0g.d6Q55GNRKKgJOZSp1hFClAjthtkItRSsO2HlBJ6IQVQg.JPEG/%EC%86%90%ED%9D%A5%EB%AF%BC.jpg?type=w1200" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>손흥민</h5>
+              <p>우리나라 선수인 만큼 가장 응원하는 선수입니다.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://lh3.googleusercontent.com/proxy/nf65A82hW7e613-RvmKEko5gOPPiXIVhy_06ZZwqNqkN0XJnnlBg8Lr2PqWp_ioCwxZJ2oSDufT24DJyR2AlPMskUFe6EJH9efvuACEs8MovG7SVQxM83Z_a5dGK90kKlKpOnKaEtDt9JHTfE0YxgPagOUqSOt5kIQc9VzdLsCOr3oH4MS4YN0uP4Kt-0acBBzGJhof8TjpIAAnVxaHNx872BSfHn0SGL4Ghw8Fng4YXMoY3aq-Ki6nDTOpYMBl18YZFUWXiweLmPD6hJYRESvqzP8jGXV6lLAUCMOcQ0Fjh_W_9TImrx-4" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>스테판 커리</h5>
+              <p>커리의 경기 또한 가보고 싶네요.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</body>
+</html>
+
+
