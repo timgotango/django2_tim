@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig', # blog앱 안 apps.py 폴더에 BlogConfig 클래스
+    'account.apps.AccountConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +56,9 @@ ROOT_URLCONF = 'timproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'timproject/templates', # timproject의 템플릿을 가져오겠다
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

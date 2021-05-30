@@ -5,12 +5,17 @@
 from django.shortcuts import redirect, render
 from .models import Blog
 from django.utils import timezone
+from django.core.paginator import Paginator
 
 # Create your views here.
 
 def home(request):
     blogs = Blog.objects # Blog 클래스 안 객체를 blogs 변수에 담겠다~
-    return render(request, "home.html", {'blogs':blogs}) # blogs라는 이름으로 템플릿에서 사용하겠다~
+    blog_list = Blog.objects.all() # 블로그 객체 안의 모든 것을 가져와서 list에 담아라~(블로그 내용)
+    paginator = Paginator(blog_list, 3) # 블로그 내용 2개씩 나눠라
+    page = request.GET.get('page') # 몇 페이지인지 값을 page 변수에 넣어라
+    posts = paginator.get_page(page) # page 가져와서 posts에 넣어라 
+    return render(request, "home.html", {'blogs':blogs, 'posts':posts}) # blogs라는 이름으로 템플릿에서 사용하겠다~
 
 def detail(request, blog_id): # 인자를 블로그 id까지 2개 받음
     blog_detail = Blog.objects.get(id = blog_id) # 블로그 안 객체를 찾아서 변수에 집어넣음
